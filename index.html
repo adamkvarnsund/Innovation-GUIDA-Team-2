@@ -4,10 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+        }
+        .active {
+            display: block;
+        }
+        .center-container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <div style="height: 100vh; width: 100vw; background-color: red;">
 
+    <div class="center-container">
+        <div class="slideshow-container">
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/deck/zlZEiMFIuIEatbu0ROXtik/Presentation?node-id=6-881&node-type=slide&viewport=235%2C-24%2C0.4&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+        </div>
     </div>
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slides");
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].classList.add("active");
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+        showSlides();
+    </script>
 </body>
 </html>
