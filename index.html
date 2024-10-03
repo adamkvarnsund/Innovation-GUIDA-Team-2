@@ -1,54 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" style="font-family: Arial, Helvetica, sans-serif;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .slides {
-            display: none;
-            width: 100%;
-        }
-        .active {
-            display: block;
-        }
-        .center-container {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+      .slideshow-container {
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+      }
+      .slides {
+        display: none;
+        width: 100%;
+      }
+      .active {
+        display: block;
+      }
+      .center-container {
+        width: 100wv;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="center-container" style="display: flex;
+    flex-direction: column; gap: 2rem;">
+    <div style="height: 80px; display: flex; align-items: center; justify-content: start;">
+        <img src="/image 1.png" alt="" style="height: 80px">
+        <h2>Capstone Group 2 - (TEK830 Digitalization and AI in practice)</h2>
+    </div>
+    <div style="height: 450px;">
+        <iframe
+        style="border: 1px solid rgba(0, 0, 0, 0.1)"
+        width="700"
+        height="450"
+        src="https://embed.figma.com/deck/dqfu5eeroMcAcwpzlqN3nP/Project-Demo?node-id=1-25&node-type=slide&viewport=277%2C4%2C0.37&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
+        allowfullscreen
+        ></iframe>
+    </div>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1>Design Thinking</h1>
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: space; width: 100vw;">
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                <h3>Desirability</h3>
+                <p></p>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                <h3>Feasibility</h3>
+                <p></p>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                <h3>Viability</h3>
+                <p></p>
+            </div>
+        </div>
 
-    <div class="center-container">
-        <div class="slideshow-container">
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/deck/dqfu5eeroMcAcwpzlqN3nP/Project-Demo?node-id=1-25&node-type=slide&viewport=155%2C-75%2C0.47&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+    </div>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1>Team members:</h1>
+        <div style="display: flex; gap: 30px;">
+            <div style="text-align: center;">
+                <img src="/1.jpg" alt="" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                <p>Luqas Lundahl</p>
+                <p>luqas@example.com</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="/2.jpg" alt="" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                <p>Erik Andreasson</p>
+                <p>erik@example.com</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="/3.jpg" alt="" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                <p>Isak Genberg</p>
+                <p>isak@example.com</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="/4.jpg" alt="" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                <p>Adam Kvarnsund</p>
+                <p>adam@example.com</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="/5.jpg" alt="" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                <p>Albin Skeppstedt</p>
+                <p>albin@example.com</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="/6.jpg" alt="" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                <p>Noa Cavassi</p>
+                <p>noa@example.com</p>
+            </div>
         </div>
     </div>
+    </div>
     <script>
-        let slideIndex = 0;
-        const slides = document.getElementsByClassName("slides");
-        function showSlides() {
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].classList.add("active");
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
+      let slideIndex = 0;
+      const slides = document.getElementsByClassName("slides");
+      function showSlides() {
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
         }
-        showSlides();
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].classList.add("active");
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+      showSlides();
     </script>
-</body>
+  </body>
 </html>
